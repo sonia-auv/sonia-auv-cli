@@ -14,8 +14,12 @@ auv8:
     computer:
       execute:
         - name: ssh
-          cmd: ssh -X {{device.user}}@{{device.ip}}
+          cmd: ssh -p {{device.port}} {{device.user}}@{{device.ip}}
         - name: shutdown
-          cmd: ssh -X {{device.user}}@{{device.ip}} sudo shutdown now
+          cmd: ssh -p {{device.port}} {{device.user}}@{{device.ip}} sudo shutdown now
         - name: reboot
-          cmd: ssh -X {{device.user}}@{{device.ip}} sudo reboot now
+          cmd: ssh -p {{device.port}} {{device.user}}@{{device.ip}} sudo reboot now
+        - name: pull
+          cmd: ssh -p {{device.port}} {{device.user}}@{{device.ip}} ~/sonia-deploy/pull_auv8.sh
+        - name: launch
+          cmd: ssh -p {{device.port}} {{device.user}}@{{device.ip}} ~/sonia-deploy/launch_auv8.sh

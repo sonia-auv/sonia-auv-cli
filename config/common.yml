@@ -29,6 +29,7 @@ auv8:
   
     computer:
       ip: 192.168.0.31
+      port: 7822
       user: sonia
       usbCamFrontId: 1e10:3300
       usbCamBottomId: 1e10:3300
