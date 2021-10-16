@@ -15,7 +15,7 @@ SONIA AUV CLI Tools
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g sonia-auv-cli
+$ sudo npm install -g sonia-auv-cli
 $ sonia COMMAND
 running command...
 $ sonia (-v|--version|version)
