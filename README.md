@@ -15,7 +15,9 @@ SONIA AUV CLI Tools
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g sonia-auv-cli
+$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+$ sudo apt-get install nodejs
+$ sudo npm install -g sonia-auv-cli
 $ sonia COMMAND
 running command...
 $ sonia (-v|--version|version)
