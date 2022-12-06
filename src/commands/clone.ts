@@ -11,10 +11,7 @@ export class Clone extends Command {
     'this command. The exact command executed is: git clone git@github.com:sonia-auv/NAME.git' +
     'You must have the access rights.'
 
-  static examples = [
-    '$ sonia clone-sonia-git-repo sonia-auv-cli',
-    '$ sonia clone-sonia-git-repo sonia-deploy',
-  ]
+  static examples = ['$ sonia clone sonia-auv-cli', '$ sonia clone sonia-deploy']
 
   static args = [
     { name: 'repository',
