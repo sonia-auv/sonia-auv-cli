@@ -6,7 +6,7 @@ import { Config } from '../helper/clone-sonia-git-repo-config'
 const soniaGitLink = Config.link
 const soniaGitLinkExtension = Config.extension
 
-export class CloneSoniaGitRepo extends Command {
+export class Clone extends Command {
   static description = 'Use this command to clone a SONIA git repository. Just put the name of the repository after ' +
     'this command. The exact command executed is: git clone git@github.com:sonia-auv/NAME.git' +
     'You must have the access rights.'
@@ -32,7 +32,7 @@ export class CloneSoniaGitRepo extends Command {
 
   async run(): Promise<void> {
     console.log('Running command clone-sonia-git-repo...')
-    const { args } = this.parse(CloneSoniaGitRepo)
+    const { args } = this.parse(Clone)
     const cmd = 'git clone ' + this.parseArgs(args).soniaGitCompleteLink
 
     console.log(cmd)
